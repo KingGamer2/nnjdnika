@@ -42,12 +42,12 @@ ${prefix}new - حتى تسوي تكت
 ${prefix}uptime - لتشوف البوت من متى شغال
 ${prefix}tc - لعمل روم صوتي او كتابي مع الاعدادات
 ${prefix}cal - لاستخدام الالة الحاسبة + للجمع - للطرح * للضرب / للقسمة
-$(prefix)emojilist- يعرض لك كل الايموجيات الي بالسيرفر
-$(prefix)owner - لارسال رسالة لاونر سيرفر
-$(prefix)suggest - اقتراح شئ و لازم يكون فيه روم اسمه suggestions
-$(prefix)report - عشان تبلغ عن شخص
-$(prefix)embed - البوت يحول التقوله لامبد
-$(prefix)short - لاختصار الروابط
+${prefix}emojilist- يعرض لك كل الايموجيات الي بالسيرفر
+${prefix}owner - لارسال رسالة لاونر سيرفر
+${prefix}suggest - اقتراح شئ و لازم يكون فيه روم اسمه suggestions
+${prefix}report - عشان تبلغ عن شخص
+${prefix}embed - البوت يحول التقوله لامبد
+${prefix}short - لاختصار الروابط
 ${prefix}roles - يعرض لك كل رولات السيرفر
          
         Admin's Commands.  
@@ -73,7 +73,7 @@ ${prefix}role - لعرض قائمة بجميع اوامر الرتب
 ${prefix}autorole toggle  - عشان تفعل الautorole
 ${prefix}autorole set - عشان تحط الرتبة الي اول ما احد يدخل ياخذها
 ${prefix}giveaway - حتى تسوي قيف اوي
-$(prefix)say - يقول البوت التقوله ويحذف رسالتك
+${prefix}say - يقول البوت التقوله ويحذف رسالتك
 
         Games Commands.  
 『!rps / حجر ورقة مقص』
@@ -264,7 +264,7 @@ client.on('message', ReBeeL => {
       if(ReBeeL.content.startsWith(prefix + "owner")) {
         let args = ReBeeL.content.split(" ").slice(1);
            if(!args[0]) {
-              ReBeeL.channel.send("** $(prefix)owner <message> **")
+              ReBeeL.channel.send("** ${prefix}owner <message> **")
                 return;
                   }
                    var rebel = new Discord.RichEmbed()
