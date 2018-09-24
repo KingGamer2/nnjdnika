@@ -14,7 +14,6 @@ var Canvas = require('canvas')
 var jimp = require('jimp')
 const adminprefix = "--"
 const prefix = "!"
-let done = {};
 
 
 client.on('ready', () => {
