@@ -17,9 +17,30 @@ const prefix = "!"
 let done = {};
 
 
+client.on('ready', () => {
+  client.user.setGame(`for help type | !help  .`,'https://www.youtube.com/kinggamer_th3');
+  console.log('---------------');
+  console.log('BOT Is Online')
+  console.log('---------------')
+});
 
+ client.on('ready', function(){
+  require("./antispam.js")(client, function(message){
+     message.delete().then(yumz => {
+     message.channel.send(`stop spamming kid <@${message.author.id}>`).then(spammer => {
+     spammer.delete(2000)
+   });
+   });
+  });
+});
 
-
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "bans")) {
+        message.guild.fetchBans()
+        .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
+  .catch(console.error);
+}
+});
 
    
   
