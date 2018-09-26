@@ -2486,6 +2486,7 @@ client.on('message', function(message) {
         console.log(`Restart Done..`);
         setTimeout(() => {
             client.destroy();
+client.login(process.env.BOT_TOKEN_2);
 client.login(process.env.BOT_TOKEN);
         },3000);
     }
@@ -2494,5 +2495,5 @@ client.login(process.env.BOT_TOKEN);
 
 
 
-
+client.login(process.env.BOT_TOKEN_2);
 client.login(process.env.BOT_TOKEN);
